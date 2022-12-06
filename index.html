@@ -119,6 +119,8 @@
     	link = url.value;
     	id = link.replace(strip_timestamps, "");
     	id = id.substr(id.length - 11, 11);
+	id = id.split("&");
+	id = id[1];
     	video_holder = document.getElementById('video-holder').cloneNode(true);
     	video_holder.style.display = 'block';
     	video_holder.children[1].src = base + id + end;
