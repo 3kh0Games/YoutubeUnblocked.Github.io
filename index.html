@@ -115,16 +115,15 @@
     submit.onclick = () => {
     	if(document.getElementById('instructions')) {
     		document.getElementById('instructions').remove();
-    	}
-    	link = url.value;
-    	id = link.replace(strip_timestamps, "");
-    	id = id.substr(id.length - 11, 11);
-	id = id.split("&");
-	id = id[1];
-    	video_holder = document.getElementById('video-holder').cloneNode(true);
-    	video_holder.style.display = 'block';
-    	video_holder.children[1].src = base + id + end;
-    	video_holder_holder.appendChild(video_holder);
     }
+    link = url.value;
+    id = link.replace(strip_timestamps, "");
+    id = id.substr(id.length - 11, 11);
+    id = id.split("&");
+    id = id[1];
+    video_holder = document.getElementById('video-holder').cloneNode(true);
+    video_holder.style.display = 'block';
+    video_holder.children[1].src = base + id + end;
+    video_holder_holder.appendChild(video_holder);
   </script>
 </html>
